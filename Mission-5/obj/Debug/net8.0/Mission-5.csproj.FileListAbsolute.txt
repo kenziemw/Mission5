@@ -28,3 +28,4 @@
 /Users/Shared/Mission-5/Mission-5/obj/Debug/net8.0/Mission-5.pdb
 /Users/Shared/Mission-5/Mission-5/obj/Debug/net8.0/Mission-5.genruntimeconfig.cache
 /Users/Shared/Mission-5/Mission-5/obj/Debug/net8.0/ref/Mission-5.dll
+/Users/Shared/Mission-5/Mission-5/obj/Debug/net8.0/Mission-5.sourcelink.json

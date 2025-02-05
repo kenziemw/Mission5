@@ -6,29 +6,36 @@
     <h1 class="fw-bold text-center text-primary">Aquarium Tutoring Cost Calculator</h1>
 
     <div class="card shadow p-4 mt-4 mx-auto" style="max-width: 500px;">
+        <!-- User Input for Hours -->
         <div class="mb-3">
             <label for="hours" class="form-label fw-semibold">Hours Needed:</label>
             <input type="number" id="hours" class="form-control" min="1" required>
-            <span id="error" class="text-danger fw-semibold mt-1" style="display:none;">Please enter a valid number.</span>
+            <span id="error" class="text-danger fw-semibold mt-1" style="display:none;">Please enter a positive number.</span>
         </div>
 
+        <!-- Read-Only Hourly Rate -->
         <div class="mb-3">
-            <label for="rate" class="form-label fw-semibold">Hourly Rate:</label>
+            <label for="rate" class="form-label fw-semibold">Hourly Rate ($):</label>
             <input type="text" id="rate" class="form-control" value="25" readonly>
         </div>
 
+        <!-- Calculate Button -->
         <button id="calculate" class="btn btn-primary w-100 shadow-sm">Calculate</button>
 
+        <!-- Total Output -->
         <div class="mt-3">
             <p class="fs-5 fw-bold">Total Cost: <span id="total" class="text-success">$0</span></p>
         </div>
     </div>
 
+    <!-- Navigation Back to Home -->
     <div class="text-center mt-4">
         <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary shadow">Back to Home</a>
     </div>
 </div>
 
+<!-- jQuery Script for Calculation and Validation -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
         $("#calculate").click(function () {
@@ -37,12 +44,20 @@
 
             if (isNaN(hours) || hours <= 0) {
                 $("#error").show();
+                $("#hours").addClass("is-invalid"); // Highlight input field in red
                 $("#total").text("$0").removeClass("text-success").addClass("text-danger");
             } else {
                 $("#error").hide();
+                $("#hours").removeClass("is-invalid"); // Remove red highlight when fixed
                 let total = hours * rate;
                 $("#total").text("$" + total.toFixed(2)).removeClass("text-danger").addClass("text-success");
             }
+        });
+
+        // Remove error message when user starts typing
+        $("#hours").on("input", function () {
+            $("#error").hide();
+            $("#hours").removeClass("is-invalid");
         });
     });
 </script>
