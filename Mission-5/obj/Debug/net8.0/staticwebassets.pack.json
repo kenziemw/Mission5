@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets/images/famaqua.JPG"
     },
     {
+      "Id": "/Users/Shared/Mission-5/Mission-5/wwwroot/istockphoto-1188195584-612x612.jpg",
+      "PackagePath": "staticwebassets/istockphoto-1188195584-612x612.jpg"
+    },
+    {
+      "Id": "/Users/Shared/Mission-5/Mission-5/wwwroot/js/calculator.js",
+      "PackagePath": "staticwebassets/js/calculator.js"
+    },
+    {
       "Id": "/Users/Shared/Mission-5/Mission-5/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
