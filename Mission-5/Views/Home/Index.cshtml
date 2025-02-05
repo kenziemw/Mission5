@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Aquarium Adventures";
+}
+
+<div class="container text-center">
+
+    <h1 class="fw-bold text-primary mt-4">Welcome to Kenzie's Aquarium Adventures</h1>
+    <!-- Top Centered Image -->
+    <div class="mt-4">
+        <img src="~/images/famaqua.JPG" class="img-fluid rounded shadow-lg" alt="Aquarium Entrance" style="max-width: 70%;">
+    </div>
+    <!-- Hobby Description -->
+    <div class="mt-4 p-4 bg-white rounded shadow-sm text-start">
+        <p class="fs-5">
+            Ever since I was young, I have been fascinated by the ocean and the incredible diversity of marine life.
+            Visiting aquariums has become one of my favorite hobbies because it allows me to experience the beauty of
+            the underwater world up close. Whether it's watching jellyfish float gracefully or observing the powerful
+            movements of sharks, every trip to the aquarium is an adventure.
+        </p>
+
+        <p class="fs-5">
+            One of the things I love most about aquariums is the sense of peace they bring. The calming blue tones,
+            the slow movements of the fish, and the gentle sound of water create a relaxing atmosphere. Aquariums also
+            serve as an important tool for marine conservation, educating people about the importance of protecting
+            ocean ecosystems and preserving endangered species.
+        </p>
+
+        <p class="fs-5">
+            Some of my favorite aquariums to visit are the <strong>Georgia Aquarium</strong>, <strong>Monterey Bay Aquarium</strong>, and
+            <strong>Shedd Aquarium</strong>. Each one offers breathtaking exhibits, from giant whale sharks to mesmerizing coral
+            reefs. Exploring these aquariums has deepened my appreciation for marine life, and I hope to continue
+            visiting new ones in the future.
+        </p>
+    </div>
+
+    <!-- Aquarium Images Moved Below Paragraphs -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <img src="~/images/aquarium1.png" class="img-fluid rounded shadow" alt="Aquarium Scene">
+        </div>
+        <div class="col-md-6">
+            <img src="~/images/aquarium2.png" class="img-fluid rounded shadow" alt="Colorful Fish">
+        </div>
+    </div>
+
+    <a href="@Url.Action("Calculator", "Home")" class="btn btn-primary btn-lg mt-4 shadow">Check My Tutoring Rates</a>
+</div>
+
+
